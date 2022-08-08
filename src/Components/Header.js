@@ -1,11 +1,22 @@
 import React from "react";
-import "./Header.module.css";
-import MealForm from "./MealForm";
-import MealItem from "./MealItem";
+import CartButton from "./CartButton";
+
+import classes from "./Header.module.css";
+import meals from "./meals.jpg";
+
 const Header = () => {
   return (
-    <div className="header">
+    <div >
+      <header className={classes.header} >
+        <h1>ReactMeals</h1>
+        <CartButton />
+        
+      </header>
       
+      <div className={classes['main-image']} >
+        <img  src={meals} alt="A Cover" />
+      </div>
+     
     </div>
   );
 };

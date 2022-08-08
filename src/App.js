@@ -1,5 +1,6 @@
-
+import Header from "./Components/Header";
 import MealForm from "./Components/MealForm";
+import MealsSummary from "./Components/MealsSummary";
 const DUMMY_MEALS = [
   {
     id: "m1",
@@ -28,9 +29,9 @@ const DUMMY_MEALS = [
 ];
 function App() {
   return (
-    <div>
-      
-      
+    <div style={{ width: "100%" }}>
+      <Header />
+      <MealsSummary />
       <MealForm items={DUMMY_MEALS} />
     </div>
   );

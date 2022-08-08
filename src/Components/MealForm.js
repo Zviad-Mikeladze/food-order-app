@@ -6,7 +6,7 @@ import Card from "./Card";
 const MealForm = (props) => {
   return (
     <Card>
-      <div className={classes.form}>
+      <form className={classes.form}>
         {props.items.map((meals) => {
           return (
             <div key={meals.id}>
@@ -19,7 +19,7 @@ const MealForm = (props) => {
             </div>
           );
         })}
-      </div>
+      </form>
     </Card>
   );
 };
