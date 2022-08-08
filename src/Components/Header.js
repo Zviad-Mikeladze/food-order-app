@@ -4,12 +4,12 @@ import CartButton from "./CartButton";
 import classes from "./Header.module.css";
 import meals from "./meals.jpg";
 
-const Header = () => {
+const Header = (props) => {
   return (
     <Fragment >
       <header className={classes.header} >
         <h1>ReactMeals</h1>
-        <CartButton />
+        <CartButton onClick={props.onShowCart}/>
         
       </header>
       
