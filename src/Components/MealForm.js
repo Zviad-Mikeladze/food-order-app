@@ -2,25 +2,23 @@ import React from "react";
 import MealItem from "./MealItem";
 import classes from "./MealForm.module.css";
 import Card from "./Card";
+import Input from "./Input";
 
 const MealForm = (props) => {
   return (
-    <Card>
+   
       <form className={classes.form}>
-        {props.items.map((meals) => {
-          return (
-            <div key={meals.id}>
-              <MealItem
-                mealId={meals.id}
-                mealName={meals.name}
-                mealDescription={meals.description}
-                mealPrice={meals.price}
-              />
-            </div>
-          );
-        })}
+       <Input label="amount" input={{
+        id:'amount_'+props.id,
+        type:'number',
+        min:'1',
+        max:'5',
+        step:'1',
+        defaultValue:'1',
+       }} />
+       <button>+ ADD </button>
       </form>
-    </Card>
+   
   );
 };
 

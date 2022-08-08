@@ -1,14 +1,11 @@
 import React from "react";
 import classes from "./Input.module.css";
 
-const Input = () => {
+const Input = (props) => {
   return (
     <div className={classes.input}>
-      <label>
-        {" "}
-        Amount
-        <input min={0} max={99} type="number" defaultValue={0} ></input>
-      </label>
+    <label htmlFor={props.input.id} > {props.label} </label>
+    <input {...props.input} />
     </div>
   );
 };
