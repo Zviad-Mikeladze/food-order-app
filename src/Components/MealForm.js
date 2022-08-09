@@ -6,7 +6,9 @@ import Input from "./Input";
 
 const MealForm = (props, ref) => {
   const [amountIsvalid, setAmountIsValid] = useState(true);
+
   const amountInputRef = useRef();
+
   const submitHandler = (event) => {
     event.preventDefault();
     const enteredAmount = amountInputRef.current.value;
@@ -19,6 +21,7 @@ const MealForm = (props, ref) => {
       setAmountIsValid(false);
       return;
     }
+
     props.onAddToCart(enteredAmountNumber);
   };
   return (
